@@ -3,7 +3,8 @@
   height: 0;
 }
 
-.video-js.player-style-youtube .vjs-progress-control .vjs-progress-holder, .video-js.player-style-youtube .vjs-progress-control {
+.video-js.player-style-youtube .vjs-progress-control .vjs-progress-holder,
+.video-js.player-style-youtube .vjs-progress-control {
   position: absolute;
   right: 0;
   left: 0;
@@ -12,26 +13,26 @@
 }
 
 .video-js.player-style-youtube .vjs-control-bar {
-  background: linear-gradient(rgba(0,0,0,0.1), rgba(0, 0, 0,0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
 }
 
 .video-js.player-style-youtube .vjs-slider {
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.video-js.player-style-youtube .vjs-load-progress > div {
-  background-color: rgba(255,255,255,0.5);
+.video-js.player-style-youtube .vjs-load-progress>div {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .video-js.player-style-youtube .vjs-play-progress {
-  background-color: red;
+  background-color: rgb(255, 0, 255);
 }
 
 .video-js.player-style-youtube .vjs-progress-control:hover .vjs-progress-holder {
   font-size: 15px;
 }
 
-.video-js.player-style-youtube .vjs-control-bar > .vjs-spacer {
+.video-js.player-style-youtube .vjs-control-bar>.vjs-spacer {
   flex: 1;
   order: 2;
 }
@@ -41,7 +42,7 @@
 }
 
 .video-js.player-style-youtube .vjs-play-progress::before {
-  color: red;
+  color: rgb(255, 0, 255);
   font-size: 0.85em;
   display: none;
 }
@@ -71,8 +72,11 @@
   padding-top: 2em
 }
 
-.video-js.player-style-youtube .vjs-progress-control .vjs-progress-holder, .video-js.player-style-youtube .vjs-progress-control {height: 5px;
-margin-bottom: 10px;}
+.video-js.player-style-youtube .vjs-progress-control .vjs-progress-holder,
+.video-js.player-style-youtube .vjs-progress-control {
+  height: 5px;
+  margin-bottom: 10px;
+}
 
 ul.vjs-menu-content::-webkit-scrollbar {
   display: none;
@@ -82,11 +86,10 @@ ul.vjs-menu-content::-webkit-scrollbar {
   cursor: none;
 }
 
-.video-js .vjs-text-track-display > div > div > div {
+.video-js .vjs-text-track-display>div>div>div {
   background-color: rgba(0, 0, 0, 0.75) !important;
   border-radius: 9px !important;
   padding: 5px !important;
-  line-height: 1.5 !important;
 }
 
 .vjs-play-control,
@@ -124,7 +127,7 @@ ul.vjs-menu-content::-webkit-scrollbar {
   order: 7;
 }
 
-.vjs-playback-rate > .vjs-menu {
+.vjs-playback-rate>.vjs-menu {
   width: 50px;
 }
 
@@ -156,7 +159,7 @@ ul.vjs-menu-content::-webkit-scrollbar {
 .vjs-menu li.vjs-selected,
 .vjs-menu li.vjs-selected:focus,
 .vjs-menu li.vjs-selected:hover {
-  background-color: rgba(0, 182, 240, 0.75);
+  background-color: rgba(255, 0, 255, 0.75);
 }
 
 /* Progress Bar */
@@ -171,17 +174,18 @@ ul.vjs-menu-content::-webkit-scrollbar {
 
 .video-js .vjs-slider:hover,
 .video-js button:hover {
-  color: rgba(0, 182, 240, 1);
+  color: rgba(255, 0, 255, 1);
 }
 
 .video-js.player-style-invidious .vjs-play-progress {
-  background-color: rgba(0, 182, 240, 1);
+  background-color: rgba(255, 0, 255, 1);
 }
 
 /* Overlay */
 .video-js .vjs-overlay {
   background-color: rgba(35, 35, 35, 0.75) !important;
 }
+
 .video-js .vjs-overlay * {
   color: rgba(255, 255, 255, 1) !important;
   text-align: center;
@@ -263,4 +267,65 @@ video.video-js {
   .vjs-modal-dialog-content {
     overflow-x: hidden;
   }
+}
+
+/* Hide Elements */
+.vjs-share-control {
+  display: none !important;
+}
+
+a[title='Audio mode'] {
+  display: none !important;
+}
+
+p[id='watch-on-another-invidious-instance'] {
+  display: none !important;
+}
+
+p[id='embed-link'] {
+  display: none !important;
+}
+
+p[id='annotations'] {
+  display: none !important;
+}
+
+p[id='genre'] {
+  display: none !important;
+}
+
+p[id='license'] {
+  display: none !important;
+}
+
+p[id='family_friendly'] {
+  display: none !important;
+}
+
+p[id='wilson'] {
+  display: none !important;
+}
+
+p[id='rating'] {
+  display: none !important;
+}
+
+p[id='engagement'] {
+  display: none !important;
+}
+
+.comments {
+  display: none !important;
+}
+
+.pure-u-1-4:has(span[id='user_name']) {
+  display: none !important;
+}
+
+.pure-u-1-4:has(a[id='notification_ticker']) {
+  display: none !important;
+}
+
+.form[action='/download'] {
+  display: none !important;
 }
